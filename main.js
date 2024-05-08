@@ -1,7 +1,22 @@
+/* Definindo os alfabetos (o professor disse que não precisava, mas eu ja tinha feito) */
+Epsilon = 'a-z'
+Gama = 'A-Z'
+Nu = '0-9'
+
+/* Definindo as expressoes regulares */
+const nomeRegex =new RegExp(`^[${Gama}][${Epsilon}]+(\\s[${Gama}][${Epsilon}]+){1,2}$`);
+const emailRegex = new RegExp(`^[${Epsilon}${Gama}${Nu}._%+-]+@[${Epsilon}${Gama}${Nu}.-]+\.[${Epsilon}${Gama}]{2,}$`);
+const senhaRegex = new RegExp(`^(?=.*[${Gama}])(?=.*[${Nu}])[${Epsilon}${Gama}${Nu}]*[${Epsilon}${Gama}${Nu}]*$`);
+const cpfRegex = new RegExp(`^[${Nu}]{3}.[${Nu}]{3}.[${Nu}]{3}-[${Nu}]{2}$`);
+const telefoneRegex = new RegExp(`^\\({0,1}[${Nu}]{2}\\){0,1}\\s9[${Nu}]{4}-{0,1}[${Nu}]{4}$`);
+const dataRegex = new RegExp(`^[${Nu}][${Nu}]\/[${Nu}][${Nu}]\/[${Nu}][${Nu}][${Nu}][${Nu}]\\s[0-2][${Nu}]\:[0-5][${Nu}]\:[0-5][${Nu}]$`);
+const numeroRegex = new RegExp(`^[+|-]{0,1}[${Nu}]+(\.[${Nu}]+)?$`);
+
+
+/* Funções pra validar as strings*/
 function validarNome() {
     const nome = document.getElementById('nome').value;
     const resultado = document.getElementById('resultado');
-    const nomeRegex =new RegExp(`^[${Gama}][${Epsilon}]+(\\s[${Gama}][${Epsilon}]+){1,2}$`);
 
     if (nomeRegex.test(nome)) {
         resultado.textContent = 'Nome válido!';
@@ -15,7 +30,6 @@ function validarNome() {
 function validarEmail() {
     const email = document.getElementById('email').value;
     const resultado = document.getElementById('resultado');
-    const emailRegex = new RegExp(`^[${Epsilon}${Gama}${Nu}._%+-]+@[${Epsilon}${Gama}${Nu}.-]+\.[${Epsilon}${Gama}]{2,}$`);
 
     if (emailRegex.test(email)) {
         resultado.textContent = 'E-mail válido!';
@@ -29,7 +43,6 @@ function validarEmail() {
 function validarSenha() {
     const senha = document.getElementById('senha').value;
     const resultado = document.getElementById('resultado');
-    const senhaRegex = new RegExp(`^(?=.*[${Gama}])(?=.*[${Nu}])[${Epsilon}${Gama}${Nu}]*[${Epsilon}${Gama}${Nu}]*$`);
 
     if (senhaRegex.test(senha)) {
         resultado.textContent = 'Senha válida!';
@@ -43,7 +56,6 @@ function validarSenha() {
 function validarCPF() {
     const cpf = document.getElementById('cpf').value;
     const resultado = document.getElementById('resultado');
-    const cpfRegex = new RegExp(`^[${Nu}]{3}.[${Nu}]{3}.[${Nu}]{3}-[${Nu}]{2}$`);
 
     if (cpfRegex.test(cpf)) {
         resultado.textContent = 'CPF válido!';
@@ -57,7 +69,6 @@ function validarCPF() {
 function validarTelefone() {
     const telefone = document.getElementById('telefone').value;
     const resultado = document.getElementById('resultado');
-    const telefoneRegex = new RegExp(`^\\({0,1}[${Nu}]{2}\\){0,1}\\s9[${Nu}]{4}-{0,1}[${Nu}]{4}$`);
 
     if (telefoneRegex.test(telefone)) {
         resultado.textContent = 'Telefone válido!';
@@ -71,7 +82,6 @@ function validarTelefone() {
 function validarData() {
     const data = document.getElementById('data').value;
     const resultado = document.getElementById('resultado');
-    const dataRegex = new RegExp(`^[${Nu}][${Nu}]\/[${Nu}][${Nu}]\/[${Nu}][${Nu}][${Nu}][${Nu}]\\s[0-2][${Nu}]\:[0-5][${Nu}]\:[0-5][${Nu}]$`);
 
     if (dataRegex.test(data)) {
         resultado.textContent = 'Data válida!';
@@ -85,7 +95,6 @@ function validarData() {
 function validarNumero() {
     const telefone = document.getElementById('numero').value;
     const resultado = document.getElementById('resultado');
-    const numeroRegex = new RegExp(`^[+|-]{0,1}[${Nu}]+(\.[${Nu}]+)?$`);
 
     if (numeroRegex.test(telefone)) {
         resultado.textContent = 'Mumero válido!';
