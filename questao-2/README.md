@@ -1,6 +1,6 @@
 # Comando questao 2
 
-Implemente em linguagem Python 3, utilizando expressões regulares, os arranjos para Casais heterossexuais mais velhos que os filhos com pelo menos duas filhas mulheres, ou pelo menos um filho homem, ou ainda pelo menos dois filhos homens e uma filha mulher sobre o alfabeto Σ = {H, M, h, m}, com significado:
+Implemente, na linguagem de programação de sua preferência, os arranjos familiares solicitados nos itens abaixo sobre o alfabeto Σ = {H, M, h, m}, com significado:
 
 * H representa um marido;
 * M representa uma esposa;
@@ -9,7 +9,6 @@ Implemente em linguagem Python 3, utilizando expressões regulares, os arranjos 
 * A posição relativa de uma letra em relação às demais indica a idade relativa daquele membro da família em relação aos demais (os mais novos estão sempre à direita).
 
 Exemplo: a cadeia “MHhmm” representa uma família com um casal heterossexual em que a mulher é mais velha que o homem. Além disso, esse casal possui três filhos, um homem e duas mulheres, sendo que o filho homem é o mais velho dos três.
-
 
 a) Casais heterossexuais mais velhos que os filhos com pelo menos duas filhas mulheres, ou pelo menos um filho homem, ou ainda pelo menos dois filhos homens e uma filha mulher.
 
@@ -24,4 +23,8 @@ e) Casais homossexuais mais velhos que os filhos, em que o sexo dos filhos é al
 f) Casais homossexuais mais velhos que os filhos, com qualquer quantidade de filhos homens e mulheres, mas que não tiveram dois filhos homens consecutivos.
 
 g) Arranjo de no mínimo x pertencente aos numeros naturais e no máximo y pertencente aos numeros naturais, com x maior que 0, y maior que 0 e x menor ou igual a y, de adultos (Hs ou Ms) mais velhos que os filhos, com qualquer quantidade de filhos homens e mulheres, mas que os três filhos mais novos não foram homens.
+
+# Parametros adotados
+
+Linguagem de programação: Python 3
 
