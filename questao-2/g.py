@@ -3,7 +3,7 @@ import re
 def validar_arranjo_familiar(arranjo):
     # Expressão regular para arranjo de adultos mais velhos que os filhos com qualquer quantidade de filhos homens e mulheres, mas que os três filhos mais novos não são homens
     
-    regex = r"^(?!.*hhh)[HM]+[hm]*$"
+    regex = r"^[HM]+((h|m)*m(h|m)?(h|m)?)*$"
     # Verificar se o arranjo familiar corresponde ao padrão
     return re.fullmatch(regex, arranjo) is not None
 
